@@ -5,10 +5,6 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-// Middleware para permitir CORS (si es necesario, por ejemplo, si estás haciendo solicitudes desde un frontend)
-const cors = require('cors');
-app.use(cors());
-
 // Ruta de prueba GET
 app.get('/', (req, res) => {
   res.json({ message: 'API is working!' });

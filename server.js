@@ -3,6 +3,8 @@ const express = require('express');
 // Crear una instancia de express
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 // Middleware para permitir CORS (si es necesario, por ejemplo, si estás haciendo solicitudes desde un frontend)
 const cors = require('cors');
 app.use(cors());

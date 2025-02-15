@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node index.js",
-=======
->>>>>>> b014652 (Initial commit)
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

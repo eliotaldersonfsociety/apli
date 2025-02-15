@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 
 // Habilitar CORS
 app.use(cors({
-  origin: "*", // Permitir solicitudes desde el frontend
+  origin: "https://next-omega-henna-96.vercel.app", // Permitir solicitudes desde el frontend
   credentials: true, // Permitir cookies y autenticación con credenciales
 }));
 

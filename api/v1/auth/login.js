@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { body, validationResult } from 'express-validator';
-import { getUserByEmail } from '../models/user';
+import { getUserByEmail } from '../../models/user';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {

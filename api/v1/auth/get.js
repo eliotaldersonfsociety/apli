@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { getUserById } from '../../../models/user';
+import { getUserById } from '../../models/user';
 
 export default async function handler(req, res) {
   if (req.method === 'GET') {

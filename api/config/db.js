@@ -1,14 +1,10 @@
-// config/db.js
-import { Client } from 'pg';
+// db.js
+const { Client } = require('turso');  // Usamos el cliente de Turso
+require('dotenv').config();
 
 const client = new Client({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  url: process.env.TURSO_CONNECTION_URL,   // Usamos la URL proporcionada
+  authToken: process.env.TURSO_AUTH_TOKEN // Usamos el token para autenticar la conexión
 });
 
-client.connect();
-
-export { client };
+module.exports = client;

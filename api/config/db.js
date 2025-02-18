@@ -1,10 +1,10 @@
-// db.js
-const { Client } = require('turso');  // Usamos el cliente de Turso
-require('dotenv').config();
+import { Client } from 'turso';  // Usamos el cliente de Turso
+import dotenv from 'dotenv';  // Cargar variables de entorno
+dotenv.config();
 
 const client = new Client({
-  url: process.env.TURSO_CONNECTION_URL,   // Usamos la URL proporcionada
-  authToken: process.env.TURSO_AUTH_TOKEN // Usamos el token para autenticar la conexión
+  url: process.env.TURSO_CONNECTION_URL,  // URL de conexión de Turso
+  authToken: process.env.TURSO_AUTH_TOKEN  // Token de autenticación de Turso
 });
 
-module.exports = client;
+export { client };  // Exportar el cliente para usarlo en otros archivos
